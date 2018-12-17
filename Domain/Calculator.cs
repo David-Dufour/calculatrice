@@ -1,12 +1,14 @@
 using System;
 
-namespace domain
+namespace Domain
 {
-    class Calculator
+  class Calculator
+  {
+    public Calculator() { }
+
+    public double Sum(double x, double y)
     {
-      public Calculator()
-      {
-          
-      }
+      return x + y;
     }
+  }
 }

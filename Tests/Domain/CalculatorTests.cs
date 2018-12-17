@@ -1,21 +1,27 @@
 using System;
 using Xunit;
+using Domain;
 
 namespace Tests.Domain
 {
-    public class CalculatorTests
+  public class CalculatorTests
+  {
+    private readonly Calculator calculator = new Calculator();
+
+    [Fact]
+    public void WhenCalculatingTheSumOfTwoNumbers_ThenAddTheNumbersTogether()
     {
-        [Fact]
-        public void Test1()
-        {
-            Assert.Equal(4, Add(2, 2));
-        }
+      var sum = calculator.Sum(1.111, 2.222);
 
-        int Add(int x, int y)
-        {
-            return x + y;
-        }
+      Assert.Equal(3.333, sum);
     }
-}
 
-// Racine carrée d'un nombre mettre au carrée.
+    [Fact]
+    public void WhenCalculatingTheSumOfNegativeNumbers_ThenSubstractTheNegativeValueFromThePositive()
+    {
+      var sum = calculator.Sum(-1.111, 2.222);
+
+      Assert.Equal(1.111, sum);
+    }
+  }
+}
