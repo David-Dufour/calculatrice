@@ -1,9 +1,9 @@
 using System;
 using Xunit;
 
-namespace PrimeService.Tests
+namespace Tests.Domain
 {
-    public class UnitTest1
+    public class CalculatorTests
     {
         [Fact]
         public void Test1()
