@@ -1,12 +1,14 @@
 ﻿using System;
 
-namespace calculatrice
+namespace Calculatrice
 {
-    class Program
+  class Program
+  {
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World!");
-        }
+      var equationSolver = new EquationSolver();
+
+      equationSolver.Start();
     }
+  }
 }
