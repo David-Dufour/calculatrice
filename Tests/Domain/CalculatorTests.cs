@@ -1,8 +1,9 @@
 using System;
 using Xunit;
-using Domain;
 
-namespace Tests.Domain
+using Calculatrice.Domain;
+
+namespace Calculatrice.Tests.Domain
 {
   public class CalculatorTests
   {

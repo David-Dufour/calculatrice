@@ -1,8 +1,8 @@
 using System;
 
-namespace Domain
+namespace Calculatrice.Domain
 {
-  class Calculator
+  public class Calculator
   {
     public Calculator() { }
 
