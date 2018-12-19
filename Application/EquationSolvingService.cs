@@ -13,6 +13,7 @@ namespace Calculatrice.Application
     public double SolveEquation(Equation equationToSolve)
     {
       var equation = equationFactory.CreateEquation(equationToSolve);
+      
       return equation.Result;
     }
   }

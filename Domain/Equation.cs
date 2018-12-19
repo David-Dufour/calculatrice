@@ -28,6 +28,12 @@ namespace Calculatrice.Domain
 
     private double Solve(string equation)
     {
+      double result;
+      if (double.TryParse(equation, out result))
+      {
+        return result;
+      }
+
       return 0;
     }
   }
