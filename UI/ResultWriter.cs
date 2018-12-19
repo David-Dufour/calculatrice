@@ -6,7 +6,7 @@ namespace Calculatrice.UI
   {
     public ResultWriter() { }
 
-    public void Write(string result)
+    public void Write(double result)
     {
       Console.WriteLine("The result is: " + result);
     }
