@@ -1,3 +1,5 @@
+using System;
+
 namespace Calculatrice.UI
 {
   public class EquationReader
@@ -6,6 +8,7 @@ namespace Calculatrice.UI
 
     public string Read()
     {
+      Console.WriteLine("Entrez une équation:");
       return "test";
     }
   }

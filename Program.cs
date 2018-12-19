@@ -9,6 +9,7 @@ namespace Calculatrice
       var equationSolver = new EquationSolver();
 
       equationSolver.Start();
+      equationSolver.End();
     }
   }
 }
