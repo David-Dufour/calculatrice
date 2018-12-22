@@ -1,4 +1,5 @@
 using System;
+using System.Text.RegularExpressions;
 
 using Calculatrice.Application;
 
@@ -6,6 +7,7 @@ namespace Calculatrice.UI
 {
   public class EquationValidator
   {
+    private const string VALID_CHARACTERS = @"^[\d\+\-\*\/\.\,\(\)]*$";
     public EquationValidator() { }
 
     public bool Validate(string text)
@@ -18,16 +20,38 @@ namespace Calculatrice.UI
 
     private bool ValidateParenthesis(string text)
     {
-      bool hasValidParenthesis = true;
+      int numberOfOpenedParenthesis = 0;
 
-      return hasValidParenthesis;
+      foreach (char c in text)
+      {
+        switch (c)
+        {
+          case '(':
+            numberOfOpenedParenthesis++;
+            break;
+
+          case ')':
+            numberOfOpenedParenthesis--;
+            break;
+
+          default:
+            break;
+        }
+
+        if (numberOfOpenedParenthesis < 0)
+        {
+          return false;
+        }
+      }
+
+      return numberOfOpenedParenthesis == 0;
     }
 
     private bool ValidateCharacters(string text)
     {
-      bool hasValidCharacters = true;
+      Regex regexForValidCharacters = new Regex(VALID_CHARACTERS);
 
-      return hasValidCharacters;
+      return regexForValidCharacters.IsMatch(text);
     }
   }
 }
