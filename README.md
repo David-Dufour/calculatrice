@@ -1,5 +1,5 @@
 # Calculatrice
-Un exemple de calculatrice codé en .NET Core. Le projet à été écrit en TDD et doit **SEULEMENT** être utilisé à titre éducatif.
+Un exemple de calculatrice codé en .NET Core. Le projet ~à été écrit en TDD et~ doit **SEULEMENT** être utilisé à titre éducatif.
 
 ## Instructions
 Pour rouler les tests: `dotnet test`
